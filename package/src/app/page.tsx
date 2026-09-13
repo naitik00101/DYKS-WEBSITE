@@ -4,11 +4,10 @@ import Features from '@/app/components/Home/Features'
 import Cook from '@/app/components/Home/Cook'
 import Expert from '@/app/components/Home/Expert'
 import Gallery from '@/app/components/Home/Gallery'
-import Newsletter from '@/app/components/Home/Newsletter'
 import { Metadata } from 'next'
 import ContactForm from './components/Contact/Form'
 export const metadata: Metadata = {
-  title: 'Kitchen',
+  title: "Dyk's Multicusion | Urban Food Park, Vesu, Surat",
 }
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Expert />
       <Gallery />
       <ContactForm />
-      <Newsletter />
     </main>
   )
 }

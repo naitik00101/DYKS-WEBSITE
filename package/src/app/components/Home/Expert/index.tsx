@@ -59,13 +59,15 @@ const Expert = () => {
   }
 
   return (
-    <section className='bg-primary/10'>
+    <section className='bg-[#EEE2D2]/50'>
       <div className='container'>
-        <div className='text-center'>
-          <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>
+        <div className='text-center mb-10'>
+          <p className='text-[#D49B53] text-xs sm:text-sm font-semibold mb-3 tracking-[1.5px] uppercase'>
             Our Chefs
           </p>
-          <h2>Meet Our Culinary Experts</h2>
+          <h2 className='font-heading font-normal uppercase text-3xl sm:text-4xl text-[#5C3A21] tracking-[0.5px]'>
+            Meet Our Culinary Experts
+          </h2>
         </div>
         <Slider {...settings}>
           {loading
@@ -74,7 +76,7 @@ const Expert = () => {
               ))
             : chiefDetail.map((items, i) => (
                 <div key={i}>
-                  <div className='m-3 my-10 p-10 text-center backdrop-blur-md bg-white/50 rounded-3xl'>
+                  <div className='m-3 my-10 p-10 text-center bg-[#FAF6F0] rounded-3xl shadow-warm'>
                     <div className='relative'>
                       <Image
                         src={items.imgSrc}
@@ -93,10 +95,10 @@ const Expert = () => {
                       </div>
                     </div>
                     <div className='mt-16'>
-                      <h3 className='text-2xl font-semibold text-black'>
+                      <h3 className='font-heading font-normal uppercase text-lg sm:text-xl text-[#5C3A21] tracking-[0.5px] mb-1'>
                         {items.name}
                       </h3>
-                      <h4 className='text-lg font-normal text-black/50 opacity-50'>
+                      <h4 className='font-heading font-normal uppercase text-xs sm:text-sm text-[#725B48] tracking-[0.5px]'>
                         {items.profession}
                       </h4>
                     </div>

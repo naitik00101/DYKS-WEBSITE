@@ -1,222 +1,75 @@
 'use client'
 import React from 'react'
-import { useState, useEffect } from 'react'
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    fullname: '',
-    email: '',
-    phnumber: '',
-    outlet: '',
-    time: '',
-    people: '',
-    Message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [showThanks, setShowThanks] = useState(false)
-  const [loader, setLoader] = useState(false)
-  const [isFormValid, setIsFormValid] = useState(false)
-
-  useEffect(() => {
-    const isValid = Object.values(formData).every(
-      (value) => value.trim() !== ''
-    )
-    setIsFormValid(isValid)
-  }, [formData])
-  const handleChange = (e: any) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
-  }
-  const reset = () => {
-    formData.fullname = ''
-    formData.email = ''
-    formData.phnumber = ''
-    formData.outlet = ''
-    formData.time = ''
-    formData.people = ''
-    formData.Message = ''
-  }
-  const handleSubmit = async (e: any) => {
-    e.preventDefault()
-    setLoader(true)
-
-    fetch('https://formsubmit.co/ajax/bhainirav772@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({
-        FullName: formData.fullname,
-        Email: formData.email,
-        PhoneNo: formData.phnumber,
-        Outlet: formData.outlet,
-        Time: formData.time,
-        People: formData.people,
-        Message: formData.Message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          setSubmitted(true)
-          setShowThanks(true)
-          reset()
-
-          setTimeout(() => {
-            setShowThanks(false)
-          }, 5000)
-        }
-
-        reset()
-      })
-      .catch((error) => {
-        setLoader(false)
-        console.log(error.message)
-      })
-  }
   return (
-    <section id='reserve' className='scroll-mt-20'>
+    <section id='location' className='scroll-mt-20 my-16'>
       <div className='container'>
         <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase text-center'>
-            reservation
-          </p>
+          Visit Us
+        </p>
         <h2 className='mb-9 font-bold tracking-tight text-center'>
-          Dine With Us
+          Our Location
         </h2>
-        <div className='relative border px-6 py-2 rounded-3xl'>
-          <form
-            onSubmit={handleSubmit}
-            className='flex flex-wrap w-full m-auto justify-between'>
-            <div className='sm:flex gap-6 w-full'>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='fname' className='pb-3 inline-block text-base'>
-                  Full Name
-                </label>
-                <input
-                  id='fname'
-                  type='text'
-                  name='fullname'
-                  value={formData.fullname}
-                  onChange={handleChange}
-                  placeholder='John Doe'
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F4ECE1] p-6 lg:p-8 rounded-3xl shadow-sm'>
+          <div className='lg:col-span-5 flex flex-col gap-6'>
+            <h3 className='text-2xl font-bold text-[#5C3A21]'>
+              Dyk's Multicusion
+            </h3>
+            <p className='text-[#725B48] text-base leading-relaxed'>
+              Experience fine multicuisine dining in the heart of Surat. Join us at Urban Food Park for an unforgettable meal with family and friends.
+            </p>
+
+            <div className='flex flex-col gap-4 mt-2'>
+              <div className='flex items-start gap-3'>
+                <div className='bg-primary/10 p-3 rounded-full text-primary font-bold'>
+                  📍
+                </div>
+                <div>
+                  <h4 className='font-semibold text-[#5C3A21]'>Address</h4>
+                  <p className='text-[#725B48] text-sm'>
+                    Urban Food Park, Vesu, Surat, Gujarat 395007
+                  </p>
+                </div>
               </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  Email Address
-                </label>
-                <input
-                  id='email'
-                  type='email'
-                  name='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder='john.doe@example.com'
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
+
+              <div className='flex items-start gap-3'>
+                <div className='bg-primary/10 p-3 rounded-full text-primary font-bold'>
+                  📞
+                </div>
+                <div>
+                  <h4 className='font-semibold text-[#5C3A21]'>Contact Numbers</h4>
+                  <p className='text-[#725B48] text-sm'>
+                    <a href='tel:7203977452' className='hover:text-primary transition-colors'>+91 7203977452</a> / <a href='tel:9979377452' className='hover:text-primary transition-colors'>+91 9979377452</a>
+                  </p>
+                </div>
               </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label
-                  htmlFor='Phnumber'
-                  className='pb-3 inline-block text-base'>
-                  Phone Number
-                </label>
-                <input
-                  id='Phnumber'
-                  type='tel'
-                  name='phnumber'
-                  placeholder='+1234567890'
-                  value={formData.phnumber}
-                  onChange={handleChange}
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
+
+              <div className='flex items-start gap-3'>
+                <div className='bg-primary/10 p-3 rounded-full text-primary font-bold'>
+                  ✉️
+                </div>
+                <div>
+                  <h4 className='font-semibold text-[#5C3A21]'>Email</h4>
+                  <p className='text-[#725B48] text-sm'>
+                    <a href='mailto:Dyksmulticusion@gmail.com' className='hover:text-primary transition-colors'>Dyksmulticusion@gmail.com</a>
+                  </p>
+                </div>
               </div>
             </div>
-            <div className='sm:flex gap-6 w-full'>              
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  Outlet
-                </label>
-                <select
-                  name='outlet'
-                  id='outlet'
-                  value={formData.outlet}
-                  onChange={handleChange}
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'>
-                  <option value=''>Choose the Outlet</option>
-                  <option value='Downtown LA'>Downtown LA</option>
-                  <option value='Hollywood'>Hollywood</option>
-                  <option value='West Hollywood'>West Hollywood</option>
-                  <option value='Beverly Hills'>Beverly Hills</option>
-                  <option value='Santa Monica'>Santa Monica</option>
-                  <option value='Venice Beach'>Venice Beach</option>
-                </select>
-              </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='fname' className='pb-3 inline-block text-base'>
-                  Time
-                </label>
-                <input
-                  id='time'
-                  type='time'
-                  name='time'
-                  value={formData.time}
-                  onChange={handleChange}
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
-              </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  NO. Of People
-                </label>
-                <input
-                  id='people'
-                  type='number'
-                  name='people'
-                  value={formData.people}
-                  onChange={handleChange}
-                  placeholder='2'
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
-              </div>
-            </div>
-            <div className='sm:flex gap-3 w-full'>
-              
-            </div>
-            <div className='w-full mx-0 my-2.5 flex-1'>
-              <label htmlFor='message' className='text-base inline-block'>
-                Message
-              </label>
-              <textarea
-                id='message'
-                name='Message'
-                value={formData.Message}
-                onChange={handleChange}
-                className='w-full mt-2 rounded-2xl px-5 py-3 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                placeholder='Anything else you wanna communicate'></textarea>
-            </div>
-            <div className='mx-0 my-2.5 w-full'>
-              <button
-                type='submit'
-                disabled={!isFormValid || loader}
-                className={`border leading-none px-6 text-lg font-medium py-4 rounded-full 
-                    ${
-                      !isFormValid || loader
-                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        : 'bg-primary border-primary text-white hover:bg-transparent hover:text-primary cursor-pointer'
-                    }`}>
-                Submit
-              </button>
-            </div>
-          </form>
-          {showThanks && (
-            <div className='text-white bg-primary rounded-full px-4 text-lg mb-4.5 mt-3 absolute flex items-center gap-2'>
-              Thanks! Your table is booked. See you soon.
-              <div className='w-3 h-3 rounded-full animate-spin border-2 border-solid border-white border-t-transparent'></div>
-            </div>
-          )}
+          </div>
+
+          <div className='lg:col-span-7 w-full overflow-hidden rounded-2xl shadow-md h-[400px]'>
+            <iframe
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.122668377893!2d72.76347679999999!3d21.147516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04da197b6520b%3A0xcdf7edf47d876cae!2sDyk%27s%20Multicusion!5e0!3m2!1sen!2sin!4v1788619076940!5m2!1sen!2sin'
+              width='100%'
+              height='100%'
+              style={{ border: 0 }}
+              allowFullScreen
+              loading='lazy'
+              referrerPolicy='strict-origin-when-cross-origin'
+              title="Dyk's Multicusion Location Map"></iframe>
+          </div>
         </div>
       </div>
     </section>

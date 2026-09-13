@@ -75,8 +75,8 @@ export const PackageStructure = () => {
                         </div>
                         <div className='flex'>
                           <div className='flex flex-col justify-between gap-2 mt-2'>
-                            {Counts.slice(0, 22).map((item) => {
-                              return <p className='text-xl text-black'>|</p>
+                            {Counts.slice(0, 22).map((item, index) => {
+                              return <p key={index} className='text-xl text-black'>|</p>
                             })}
                           </div>
                           <ul className='ps-5 md:ps-12 list-unstyled'>
@@ -93,9 +93,9 @@ export const PackageStructure = () => {
                               </div>
                               <div className='flex'>
                                 <div className='flex flex-col justify-between gap-2 mt-2'>
-                                  {Counts.slice(0, 16).map((item) => {
+                                  {Counts.slice(0, 16).map((item, index) => {
                                     return (
-                                      <p className='text-xl text-black'>|</p>
+                                      <p key={index} className='text-xl text-black'>|</p>
                                     )
                                   })}
                                 </div>
@@ -146,9 +146,9 @@ export const PackageStructure = () => {
                                           <div className='flex'>
                                             <div className='flex flex-col justify-between gap-1 mt-2'>
                                               {Counts.slice(0, 2).map(
-                                                (item) => {
+                                                (item, idx) => {
                                                   return (
-                                                    <p className='text-xl text-black'>
+                                                    <p key={idx} className='text-xl text-black'>
                                                       |
                                                     </p>
                                                   )
@@ -227,9 +227,9 @@ export const PackageStructure = () => {
                                     </div>
                                     <div className='flex'>
                                       <div className='flex flex-col justify-between gap-2 mt-2'>
-                                        {Counts.slice(0, 2).map((item) => {
+                                        {Counts.slice(0, 2).map((item, idx) => {
                                           return (
-                                            <p className='text-xl text-black'>
+                                            <p key={idx} className='text-xl text-black'>
                                               |
                                             </p>
                                           )
@@ -290,9 +290,9 @@ export const PackageStructure = () => {
                                     </div>
                                     <div className='flex'>
                                       <div className='flex flex-col justify-between gap-2 mt-2'>
-                                        {Counts.slice(0, 1).map((item) => {
+                                        {Counts.slice(0, 1).map((item, idx) => {
                                           return (
-                                            <p className='text-xl text-black'>
+                                            <p key={idx} className='text-xl text-black'>
                                               |
                                             </p>
                                           )

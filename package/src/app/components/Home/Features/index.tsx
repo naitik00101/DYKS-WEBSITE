@@ -30,10 +30,10 @@ const Features = () => {
     <section id='features'>
       <div className='container'>
         <div className='text-center mb-14'>
-          <p className='text-primary text-lg font-normal tracking-widest uppercase'>
+          <p className='text-[#D49B53] text-xs sm:text-sm font-semibold tracking-[1.5px] uppercase'>
             Why Choose Us
           </p>
-          <h2 className='font-semibold lg:max-w-60% mx-auto mt-3'>
+          <h2 className='font-heading font-normal text-3xl sm:text-4xl lg:text-5xl text-[#5C3A21] tracking-[0.5px] lg:max-w-60% mx-auto mt-3'>
             Experience More Than Just a Meal
           </h2>
         </div>
@@ -45,7 +45,7 @@ const Features = () => {
             : features.map((items, i) => (
                 <div
                   key={i}
-                  className='p-8 relative rounded-3xl bg-linear-to-b from-primary/10 to-white shadow-md hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
+                  className='p-8 relative rounded-3xl bg-linear-to-b from-primary/10 to-[#F4ECE1] shadow-warm hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
                   <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] left-[0%]'>
                     <Image
                       src={items.imgSrc}
@@ -54,10 +54,10 @@ const Features = () => {
                       height={10}
                     />
                   </div>
-                  <p className='text-2xl text-black font-semibold text-center mt-16'>
+                  <p className='font-heading font-normal text-lg sm:text-xl text-[#5C3A21] text-center mt-16 mb-2 tracking-[0.5px]'>
                     {items.heading}
                   </p>
-                  <p className='text-base font-normal text-black/50 text-center mt-2 leading-6'>
+                  <p className='text-xs sm:text-sm font-normal text-[#725B48] text-center leading-relaxed tracking-[0.3px]'>
                     {items.subheading}
                   </p>
                 </div>

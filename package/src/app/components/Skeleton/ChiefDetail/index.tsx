@@ -4,7 +4,7 @@ const ChiefDetailSkeleton = () => {
       <div>
         <div
           role='status'
-          className='max-w-md animate-pulse overflow-hidden m-3 my-10 p-10 text-center backdrop-blur-md bg-white/50 rounded-3xl'>
+          className='max-w-md animate-pulse overflow-hidden m-3 my-10 p-10 text-center bg-[#FAF6F0] rounded-3xl shadow-warm'>
           <svg
             className='w-30 h-30 mx-auto text-gray-200 my-5'
             aria-hidden='true'

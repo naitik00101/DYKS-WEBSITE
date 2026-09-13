@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #df6853;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-heading: 'Boldonse', cursive, sans-serif;
+  --color-primary: #5C3A21;
+  --color-primary-hover: #432916;
+  --color-secondary: #D49B53;
+  --color-secondary-hover: #B77A32;
+  --color-bg-base: #FAF6F0;
+  --color-bg-surface: #F4ECE1;
+  --color-bg-soft: #EEE2D2;
+  --color-text: #2B1B10;
+  --color-text-muted: #725B48;
+  --color-dark-section: #23150C;
   --color-grey: #363636;
 
   --spacing-60\%: 60%;
@@ -14,14 +26,6 @@
   --radius-Newsletter: 30px 400px 30px 30px;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -31,18 +35,51 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 
+  html, body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FAF6F0;
+    color: #2B1B10;
+  }
+
+  p, span, a, button, input, textarea, select, label, li {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Boldonse', cursive, sans-serif;
+    font-weight: 400 !important;
+  }
+
   section {
     @apply py-10;
   }
 
   h1 {
-    @apply text-black md:text-7xl sm:text-6xl text-5xl
+    @apply text-[#5C3A21] md:text-7xl sm:text-6xl text-5xl font-normal leading-tight tracking-[0.5px];
   }
 
   h2 {
-    @apply text-black font-semibold sm:text-5xl text-4xl sm:leading-14 leading-11
+    @apply text-[#5C3A21] font-normal sm:text-5xl text-4xl sm:leading-14 leading-11 tracking-[0.5px];
   }
-  
+}
+
+@layer utilities {
+  .shadow-warm {
+    box-shadow: 0 10px 30px -10px rgba(92, 58, 33, 0.08);
+  }
+
+  .title-line {
+    font-family: 'Boldonse', cursive, sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    background: linear-gradient(to right, #5C3A21 50%, #d8c3b7 50%);
+    background-size: 200% 100%;
+    background-position: var(--line-fill, 100%) 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.05s linear;
+  }
 }
 
 @layer utilities {

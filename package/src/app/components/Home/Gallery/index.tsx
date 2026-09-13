@@ -37,13 +37,15 @@ const Gallery = () => {
   return (
     <section id='menu' className='scroll-mt-20'>
       <div className='container'>
-        <div className='text-center'>
-          <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>
+        <div className='text-center mb-10'>
+          <p className='text-[#D49B53] text-xs sm:text-sm font-semibold mb-3 tracking-[1.5px] uppercase'>
             Our Menu
           </p>
-          <h2>Explore Our Signature Dishes</h2>
+          <h2 className='font-heading font-normal uppercase text-3xl sm:text-4xl text-[#5C3A21] tracking-[0.5px]'>
+            Explore Our Signature Dishes
+          </h2>
         </div>
-        <div className='my-16 px-6'>
+        <div className='my-12 px-6'>
           <Masonry
             breakpointCols={{ default: 2, '700': 2, '500': 1 }}
             className='flex gap-6'
@@ -65,16 +67,16 @@ const Gallery = () => {
                       className='object-cover w-full h-full'
                     />
                     <div className='w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end'>
-                      <p className='text-white lg:text-2xl text-xl'>
+                      <p className='text-white font-heading font-normal uppercase text-lg sm:text-xl tracking-[0.5px]'>
                         {item.name}
                       </p>
                       <div className='flex items-center justify-between w-full'>
-                        <p className='text-white lg:text-2xl text-xl'>
+                        <p className='text-white font-heading font-normal uppercase text-lg sm:text-xl tracking-[0.5px]'>
                           $ {item.price}
                         </p>
                         <Link
                           href='#'
-                          className='text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm'>
+                          className='text-white font-heading font-normal uppercase text-xs sm:text-sm tracking-[0.5px] rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs'>
                           Learn More
                         </Link>
                       </div>
@@ -85,7 +87,7 @@ const Gallery = () => {
         </div>
         <div className='flex justify-center'>
           <button
-            className='px-6 py-2 border border-primary rounded-full text-base font-medium text-white bg-primary hover:bg-primary/20 hover:text-primary hover:cursor-pointer transition ease-in-out duration-300'
+            className='font-heading font-normal uppercase text-xs sm:text-sm tracking-[0.5px] px-7 py-3 border border-primary rounded-full text-white bg-primary hover:bg-primary/20 hover:text-primary hover:cursor-pointer transition ease-in-out duration-300'
             onClick={openMenu}>
             View More
           </button>
@@ -95,7 +97,7 @@ const Gallery = () => {
               className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50 px-4'
               onClick={closeMenu}>
               <div
-                className='relative mx-auto w-full max-w-2xl max-h-2/3 rounded-3xl px-4 pt-14 pb-8 text-center bg-white overflow-hidden'
+                className='relative mx-auto w-full max-w-2xl max-h-2/3 rounded-3xl px-4 pt-14 pb-8 text-center bg-[#FAF6F0] overflow-hidden shadow-warm'
                 onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={closeMenu}
@@ -104,16 +106,16 @@ const Gallery = () => {
                     icon='material-symbols:close-rounded'
                     width={24}
                     height={24}
-                    className='text-black hover:text-primary text-24 inline-block me-2'
+                    className='text-[#2B1B10] hover:text-primary text-24 inline-block me-2'
                   />
                 </button>
-                <p className='text-black text-2xl font-semibold mb-4'>
+                <p className='text-[#5C3A21] text-2xl font-semibold mb-4'>
                   Full Menu
                 </p>
                 {/* table */}
                 <div className='max-h-[350px] overflow-y-auto'>
                   <table className='w-full table-auto border-collapse text-left'>
-                    <thead className='sticky top-0 bg-neutral-100 z-10'>
+                    <thead className='sticky top-0 bg-[#F4ECE1] text-[#5C3A21] z-10'>
                       <tr>
                         <th className='py-3 px-4'>Dish</th>
                         <th className='py-3 px-4'>Description</th>
@@ -122,7 +124,7 @@ const Gallery = () => {
                     </thead>
                     <tbody>
                       {fullMenu.map((item, index) => (
-                        <tr key={index} className='border-t'>
+                        <tr key={index} className='border-t border-[#EEE2D2] text-[#2B1B10]'>
                           <td className='py-2 px-4'>{item.name}</td>
                           <td className='py-2 px-4'>{item.description}</td>
                           <td className='py-2 px-4'>{item.price}</td>

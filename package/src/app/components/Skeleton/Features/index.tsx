@@ -4,7 +4,7 @@ const FeaturesSkeleton = () => {
       <div>
         <div
           role='status'
-          className='max-w-md animate-pulse overflow-hidden p-8 relative rounded-3xl bg-linear-to-b from-primary/10 to-white shadow-md'>
+          className='max-w-md animate-pulse overflow-hidden p-8 relative rounded-3xl bg-linear-to-b from-primary/10 to-[#F4ECE1] shadow-warm'>
           <svg
             className='w-30 h-30 mx-auto text-gray-200 my-5'
             aria-hidden='true'
