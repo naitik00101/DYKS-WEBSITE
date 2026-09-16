@@ -33,7 +33,7 @@ const Features = () => {
           <p className='text-[#D49B53] text-xs sm:text-sm font-semibold tracking-[1.5px] uppercase'>
             Why Choose Us
           </p>
-          <h2 className='font-heading font-normal text-3xl sm:text-4xl lg:text-5xl text-[#5C3A21] tracking-[0.5px] lg:max-w-60% mx-auto mt-3'>
+          <h2 className='font-heading font-normal text-3xl sm:text-4xl lg:text-5xl text-[#5C3A21] tracking-[0.8px] leading-[1.3] sm:leading-[1.35] lg:leading-[1.4] lg:max-w-60% mx-auto mt-3'>
             Experience More Than Just a Meal
           </h2>
         </div>
