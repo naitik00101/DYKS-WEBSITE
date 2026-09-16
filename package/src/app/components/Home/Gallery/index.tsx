@@ -72,7 +72,7 @@ const Gallery = () => {
                       </p>
                       <div className='flex items-center justify-between w-full'>
                         <p className='text-white font-heading font-normal uppercase text-lg sm:text-xl tracking-[0.5px]'>
-                          $ {item.price}
+                          ₹ {item.price}
                         </p>
                         <Link
                           href='#'

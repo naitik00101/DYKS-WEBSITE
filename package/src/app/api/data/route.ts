@@ -61,65 +61,77 @@ const ExpertChiefData: ExpertChiefType[] = [
 
 const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: '/images/Gallery/foodone.webp',
-    name: 'Caesar Salad(187 Kcal)',
-    price: 35,
+    src: '/images/Gallery/03_dish.webp',
+    name: 'Special Masala Dosa',
+    price: 220,
   },
   {
-    src: '/images/Gallery/foodtwo.webp',
-    name: 'Christmas salad(118 Kcal)',
-    price: 17,
+    src: '/images/Gallery/02_dish.webp',
+    name: 'Aloo Paneer Bird Nest',
+    price: 250,
   },
   {
-    src: '/images/Gallery/foodthree.webp',
-    name: 'Sauteed mushrooms with pumpkin bowl(238 kcal)',
-    price: 45,
+    src: '/images/Gallery/04_dish.webp',
+    name: 'Veg. Dry Manchurian',
+    price: 170,
   },
   {
-    src: '/images/Gallery/foodfour.webp',
-    name: 'BBQ Chicken Feast Pizza(272 kcal)',
-    price: 27,
+    src: '/images/Gallery/01_dish.webp',
+    name: 'Paneer Tikka Dry',
+    price: 260,
   },
 ]
 
 const FullMenuData: FullMenuType[] = [
   {
-    name: 'Grilled Salmon',
-    price: '$18.99',
-    description: 'Served with lemon butter sauce and grilled vegetables.',
+    name: 'Paneer Tikka Dry',
+    price: '₹260.00',
+    description: 'Fresh cottage cheese marinated in aromatic spices and char-grilled to perfection.',
   },
   {
-    name: 'Caesar Salad',
-    price: '$9.99',
-    description: 'Crisp romaine with parmesan, croutons, and Caesar dressing.',
+    name: 'Veg. Dry Manchurian',
+    price: '₹170.00',
+    description: 'Crispy vegetable dumplings tossed in tangy Indo-Chinese Manchurian sauce and fresh greens.',
   },
   {
-    name: 'Margherita Pizza',
-    price: '$13.49',
-    description: 'Classic pizza with tomato, mozzarella, and fresh basil.',
+    name: 'Special Masala Dosa',
+    price: '₹220.00',
+    description: 'Crispy golden crepe filled with spiced potato masala, served with sambar and fresh chutney.',
   },
   {
-    name: 'Tomato Basil Soup',
-    price: '$6.99',
-    description: 'Creamy tomato soup with a hint of garlic and fresh basil.',
+    name: 'Tava Pulav',
+    price: '₹170.00',
+    description: 'Fragrant basmati rice stir-fried on a flat tawa with vegetables, signature spices, and fresh herbs.',
   },
   {
-    name: 'Chocolate Lava Cake',
-    price: '$7.99',
-    description:
-      'Warm chocolate cake with a molten center served with vanilla ice cream.',
+    name: 'Cheese Conti Tikki',
+    price: '₹260.00',
+    description: 'Crispy continental style patties loaded with melted cheese, served with creamy dip and slaw.',
   },
   {
-    name: 'Spaghetti Carbonara',
-    price: '$15.25',
-    description:
-      'Spaghetti tossed with eggs, pancetta, parmesan, and black pepper.',
+    name: 'Paneer Sizzler',
+    price: '₹500.00',
+    description: 'Sizzling platter loaded with grilled paneer, stir-fried vegetables, and smoky house sauce.',
   },
   {
-    name: 'Tiramisu',
-    price: '$8.50',
-    description:
-      'Layered espresso-soaked ladyfingers with mascarpone and cocoa.',
+    name: 'Hakka Noodles',
+    price: '₹160.00',
+    description: 'Wok-tossed noodles with crunchy seasonal vegetables and classic Asian seasonings.',
+  },
+  {
+    name: 'Cheese Bhaji Pav',
+    price: '₹200.00',
+    description: 'Slow-cooked spiced vegetable mash topped with melted cheese, served with buttery toasted pav.',
+  },
+  {
+    name: 'Veg. Manchow Soup',
+    price: '₹150.00',
+    description: 'Spicy, tangy dark broth loaded with diced vegetables and topped with crispy fried noodles.',
+  },
+  {
+    name: 'Exotic Pesto Pizza',
+    price: '₹280.00',
+    description: 'Hand-stretched pizza topped with rich basil pesto, mozzarella, and garden-fresh toppings.',
   },
 ]
 
