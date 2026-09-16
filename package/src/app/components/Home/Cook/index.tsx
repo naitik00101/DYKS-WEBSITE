@@ -78,7 +78,7 @@ const Cook = () => {
             </div>
 
             {/* Main Title (Line-by-Line Scroll Fill Animation) */}
-            <h2 ref={titleRef} className='flex flex-col gap-[2px] text-[34px] md:text-[34px] leading-[1.25] tracking-[0.5px] uppercase w-full font-heading font-normal'>
+            <h2 ref={titleRef} className='flex flex-col gap-1 text-[34px] md:text-[34px] leading-[1.35] tracking-[0.8px] uppercase w-full font-heading font-normal pt-2'>
               <span className='title-line font-heading'>From locally sourced to</span>
               <span className='title-line font-heading'>carefully crafted recipes, we</span>
               <span className='title-line font-heading'>believe great food brings</span>
