@@ -8,7 +8,7 @@ const Hero = () => {
       <div className='container xl:pt-7 pt-16'>
         <div className='grid grid-cols-1 lg:grid-cols-12 items-center'>
           <div className='lg:col-span-6'>
-            <h1 className='font-heading font-normal uppercase text-4xl sm:text-5xl lg:text-6xl tracking-[0.5px] mb-5 text-[#5C3A21] lg:text-start text-center leading-tight sm:leading-tight'>
+            <h1 className='font-heading font-normal uppercase text-3xl sm:text-5xl lg:text-6xl tracking-[0.5px] mb-5 text-[#5C3A21] lg:text-start text-center leading-tight sm:leading-tight'>
               Elevated Dining at Dyk’s Multicusion
             </h1>
             <p className='text-[#725B48] text-sm sm:text-base font-normal mb-8 lg:text-start text-center leading-relaxed'>
