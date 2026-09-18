@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import HeaderLink from './Navigation/HeaderLink'
@@ -12,6 +13,8 @@ const Header: React.FC = () => {
   const [headerLink, setHeaderLink] = useState<HeaderItem[]>([])
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
+  
+  const pathname = usePathname()
 
   const mobileMenuRef = useRef<HTMLDivElement>(null)
 
@@ -59,6 +62,8 @@ const Header: React.FC = () => {
       document.body.style.overflow = ''
     }
   }, [navbarOpen])
+
+  if (pathname.startsWith('/control')) return null
 
   return (
     <header

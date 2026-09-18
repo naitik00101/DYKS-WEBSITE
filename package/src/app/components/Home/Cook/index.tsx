@@ -67,7 +67,7 @@ const Cook = () => {
           <div className='lg:col-span-7 flex flex-col gap-7'>
             
             {/* Subtitle */}
-            <div className='inline-flex items-center gap-2 text-[15px] font-semibold text-[#5C3A21] uppercase tracking-[0.5px]'>
+            <div className='inline-flex items-center gap-2 text-[15px] font-medium text-[#5C3A21] uppercase tracking-[1px] px-1 py-1'>
               <span className='inline-flex items-center justify-center text-[#5C3A21]'>
                 <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'>
                   <path d='M19.9382 13.9475C19.8615 13.825 19.7274 13.75 19.5832 13.75H0.416591C0.272411 13.75 0.138271 13.825 0.0624112 13.9475C-0.0134091 14.07 -0.0209091 14.2233 0.0440909 14.3525C0.629091 15.5233 1.80491 16.25 3.11323 16.25H16.8865C18.194 16.25 19.3699 15.5233 19.9566 14.3533C20.0199 14.2233 20.0141 14.0708 19.9382 13.9475Z' fill='currentColor'/>
@@ -78,7 +78,9 @@ const Cook = () => {
             </div>
 
             {/* Main Title (Line-by-Line Scroll Fill Animation) */}
-            <h2 ref={titleRef} className='flex flex-col gap-1 text-[34px] md:text-[34px] leading-[1.35] tracking-[0.8px] uppercase w-full font-heading font-normal pt-2'>
+
+            <h2 ref={titleRef} className='flex flex-col gap-2 text-[34px] md:text-[34px] leading-[1.4] tracking-[1px] uppercase w-full font-heading font-light py-2'>
+
               <span className='title-line font-heading'>From locally sourced to</span>
               <span className='title-line font-heading'>carefully crafted recipes, we</span>
               <span className='title-line font-heading'>believe great food brings</span>
@@ -94,7 +96,7 @@ const Cook = () => {
                     <path d='M37.3996 31.8814C37.4162 31.6677 37.4256 31.4532 37.4256 31.2383C37.4256 26.9111 34.0921 23.3484 29.8582 22.982L25.6419 7.84645C25.3557 6.81896 24.2864 6.21594 23.2593 6.50204L17.2521 8.17551C16.1063 7.57619 14.8041 7.23662 13.4239 7.23662H1.05972C0.48881 39.9664 42.9516 39.9664 43.9177 39.3211L37.3996 31.8814Z' fill='#5C3A21'/>
                   </svg>
                 </div>
-                <h3 className='font-heading text-[15px] leading-[1.35] text-[#5C3A21] uppercase tracking-[0.5px] font-normal'>
+                <h3 className='font-heading text-[15px] leading-[1.5] text-[#5C3A21] uppercase tracking-[1px] font-light px-2 py-1'>
                   Fresh &amp; locally sourced ingredients
                 </h3>
               </div>
@@ -107,7 +109,7 @@ const Cook = () => {
                     <path d='M38.0876 12.2135C37.8069 11.9045 37.4432 11.6843 37.0436 11.5718L37.5441 5.81133C37.5852 5.3392 37.44 4.87937 37.1351 4.5165C36.8302 4.15364 36.4023 3.93124 35.9303 3.89024L33.5374 3.68228C33.065 3.64111 32.6055 3.78647 32.2426 4.0914L12.5646 44H31.4359C33.8894 44 35.9104 42.2164 36.1371 39.8512L38.6316 13.8344Z' fill='#5C3A21'/>
                   </svg>
                 </div>
-                <h3 className='font-heading text-[15px] leading-[1.35] text-[#5C3A21] uppercase tracking-[0.5px] font-normal'>
+                <h3 className='font-heading text-[15px] leading-[1.5] text-[#5C3A21] uppercase tracking-[1px] font-light px-2 py-1'>
                   Clean, cozy atmosphere inside
                 </h3>
               </div>
@@ -120,11 +122,11 @@ const Cook = () => {
              
 
               {/* Experience Counter Block */}
-              <div className='flex items-baseline gap-3'>
-                <span className='font-heading text-[72px] leading-none text-[#5C3A21] font-normal tracking-[1px]'>
+              <div className='flex items-baseline gap-4 px-2 py-2'>
+                <span className='font-heading text-[72px] leading-none text-[#5C3A21] font-light tracking-[2px]'>
                   15+
                 </span>
-                <span className='text-[13px] font-medium text-[#5C3A21] leading-[1.2] max-w-[80px]'>
+                <span className='text-[13px] font-normal text-[#5C3A21] leading-[1.4] max-w-[80px] tracking-wide'>
                   Year Experience
                 </span>
               </div>
@@ -132,7 +134,7 @@ const Cook = () => {
               {/* Action Button */}
               <a
                 href='#aboutus'
-                className='group inline-flex items-center gap-[10px] px-6 py-3 border border-[#5C3A21]/20 rounded text-[#5C3A21] font-heading text-sm uppercase transition-all duration-350 hover:bg-[#5C3A21] hover:border-[#5C3A21] hover:text-white hover:shadow-lg'
+                className='group inline-flex items-center gap-[12px] px-8 py-4 border border-[#5C3A21]/20 rounded text-[#5C3A21] font-heading text-sm uppercase tracking-wide font-light transition-all duration-350 hover:bg-[#5C3A21] hover:border-[#5C3A21] hover:text-white hover:shadow-lg'
               >
                 <span>About Us</span>
                 <span className='transition-transform duration-350 group-hover:translate-x-1'>
