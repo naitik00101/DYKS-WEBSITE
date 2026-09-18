@@ -1,13 +1,6 @@
-import { Documentation } from '@/app/components/Documentation/Documentation'
-import { Metadata } from 'next'
-export const metadata: Metadata = {
-  title: 'Featurs | Crypgo',
-}
+import { notFound } from 'next/navigation'
 
 export default function Page() {
-  return (
-    <>
-      <Documentation />
-    </>
-  )
+  notFound()
 }
+
