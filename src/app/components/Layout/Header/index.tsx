@@ -81,7 +81,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className='flex items-center gap-2 lg:gap-3'>
-            <Link
+            {/* <Link
               href='tel:7203977452'
               className='font-heading font-normal uppercase text-xs sm:text-sm tracking-[0.5px] hover:text-primary hidden xl:flex items-center gap-1.5'>
               <Icon
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                 className='text-primary text-3xl lg:text-2xl inline-block me-2'
               />
               +91 7203977452
-            </Link>
+            </Link> */}
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className='block lg:hidden p-2 rounded-lg'
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
               />
             </button>
           </div>
-          <Link
+          {/* <Link
             href='tel:7203977452'
             className='text-lg font-medium hover:text-primary block md:hidden mt-4 p-4'>
             <Icon
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
               className='text-primary text-3xl lg:text-2xl inline-block me-2'
             />
             +91 7203977452
-          </Link>
+          </Link> */}
           <nav className='flex flex-col items-start p-4'>
             {headerLink.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />

@@ -11,7 +11,6 @@ const HeaderData: HeaderItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/#aboutus' },
   { label: 'Menu', href: '/#menu' },
-  { label: 'Location', href: '/#location' },
 ]
 
 const FeaturesData: FeaturesType[] = [
@@ -142,7 +141,6 @@ const FooterLinkData: FooterLinkType[] = [
       { label: 'Home', href: '/' },
       { label: 'About Us', href: '/#aboutus' },
       { label: 'Menu', href: '/#menu' },
-      { label: 'Location', href: '/#location' },
     ],
   },
   {

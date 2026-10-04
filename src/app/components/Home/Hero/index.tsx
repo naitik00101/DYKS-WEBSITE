@@ -24,11 +24,6 @@ const Hero = () => {
                   View Menu →
                 </button>
               </Link>
-              <Link href='/#location'>
-                <button className='font-heading font-normal uppercase text-xs sm:text-sm tracking-[0.5px] border border-primary rounded-full py-2.5 px-6 text-primary hover:text-white hover:bg-primary hover:cursor-pointer transition ease-in-out duration-300'>
-                  View Location
-                </button>
-              </Link>
             </div>
           </div>
           <div className='lg:col-span-6 flex justify-center relative'>
